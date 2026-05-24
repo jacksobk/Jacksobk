@@ -44,6 +44,8 @@ IoU metrics, per-category success rates — for tuning retrieval relevance.
 
 **[bj-backend-member](https://github.com/jacksobk/bj-backend-member)** — A layered microservice reference implementation: strict layer separation, an endpoint registry as a single source of truth, a standardized response envelope, and per-request structured logging. *TypeScript · NestJS.*
 
+**bj-finserv-crossmodal-search(https://github.com/jacksobk/bj-finserv-crossmodal-search)** — One Elasticsearch index, three modalities — earnings-call audio, deck slides, 10-Q text — searched in plain English. A text query fans out to per-modality kNN over jina-v5-omni embeddings, fused with RRF into one interleaved rail where spoken audio ranks alongside slides and filings. Each modality embeds its native medium (no ASR, no OCR, no transcript-as-text — enforced in code, not by convention), so the cross-modal retrieval isn't a disguised text search. Frozen chip-query spec with an assertion harness. Python · FastAPI · Elasticsearch · tested · Docker.
+
 ## Focus areas
 
 Search & retrieval at scale · RAG / hybrid / semantic / multi-modal search ·
